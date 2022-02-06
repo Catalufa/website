@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Translator</title>
+
+    <style>
+
+        * {
+
+            text-align: center;
+
+            margin: 0;
+
+            padding: 0;
+
+            border: 0;
+
+            font-size: 1em;
+
+            color: white;
+
+
+
+        }
+
+
+
+        html, body {
+
+            width: 100%;
+
+            height: 100%;
+
+        }
+
+    </style>
+
+  </head>
+
+  <body>
+
+	<input id="input" style="background-color: grey; text-align: center; width: 100vw; height: 50%;"></input>
+
+    <input id="log" style="background-color: black; text-align: center; width: 100vw; height: 50%;" disabled></input>
+
+  </body>
+
+  <script>
+
+      const input = document.getElementById('input');
+
+      const log = document.getElementById('log');
+
+
+
+      input.addEventListener('input', updateValue);
+
+
+
+      function updateValue(e) {
+
+       log.value = e.target.value.toLowerCase().replaceAll("a","α").replaceAll("b","比").replaceAll("c","ぃ").replaceAll("d","D").replaceAll("e","ε").replaceAll("f","弗").replaceAll("g","ぇ").replaceAll("h","H").replaceAll("i","θ").replaceAll("j","杰").replaceAll("k","き").replaceAll("l","L").replaceAll("m","μ").replaceAll("n","娜").replaceAll("o","う").replaceAll("p","P").replaceAll("q","Σ").replaceAll("r","儿").replaceAll("s","そ").replaceAll("t","T").replaceAll("u","Φ").replaceAll("v","维").replaceAll("w","を").replaceAll("x","X").replaceAll("y","Ψ").replaceAll("z","贼");
+
+      }
+
+  </script>
+
+</html>
