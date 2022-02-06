@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Tom Cousins Soundboard</title>
+<style>
+* {
+	font-family: 'DM Sans', sans-serif;
+}
+
+html, body {
+	margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #CECECE;
+    text-align: center;
+	padding-top: 50px;
+}
+
+div {
+	width: calc(20% - 20px);
+    height: 100px;
+    background-color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    float: left;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+img {
+	height: 105px;
+	position:absolute;
+	top:0;
+	right: 50%;
+    transform: translateX(50%);
+}
+
+div:hover {
+	box-shadow: 0 0 10px 5px white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  div {
+    width: calc(50% - 20px);
+  }
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<img src="tom.png">
+<div onclick="play(1)">Maths Test</div>
+<div onclick="play(2)">Potato flower</div>
+<div onclick="play(3)">Death golf</div>
+<div onclick="play(4)">Make the bastard</div>
+<div onclick="play(5)">No idea</div>
+<div onclick="play(6)">Hmmm</div>
+<div onclick="play(7)">Not bad idea</div>
+<div onclick="play(8)">Underestimate... yeah</div>
+<div onclick="play(9)">10 speeches, 7 shots</div>
+<div onclick="play(10)">Headache inducing</div>
+<div onclick="play(11)">Fell off</div>
+<div onclick="play(12)">Could be worse</div>
+<div onclick="play(13)">I'm a disease</div>
+<div onclick="play(14)">Consumed by fire</div>
+<div onclick="play(15)">CRIIIKEY</div>
+<div onclick="play(16)">Yep</div>
+<div onclick="play(17)">Naa</div>
+<div onclick="play(18)">Yeah, sure</div>
+<div onclick="play(19)">Sure</div>
+<div onclick="play(20)">Hello</div>
+<div onclick="play(21)">Hey</div>
+<div onclick="play(22)">Bye</div>
+<div onclick="play(23)">Next lesson?</div>
+<div onclick="play(24)">Ms Rose</div>
+<div onclick="play(25)">ven-drfu-jfq</div>
+<div onclick="play(26)">BOATED</div>
+<div onclick="play(27)">Not sure</div>
+<div onclick="play(28)">Why not</div>
+<div onclick="play(29)">Might as well</div>
+<div onclick="play(30)">Not a chance</div>
+<div onclick="play(31)">Good idea</div>
+<div onclick="play(32)">Bad idea</div>
+<div onclick="play(33)">Think so</div>
+<div onclick="play(34)">Don't think so</div>
+<div onclick="play(35)">Homework?</div>
+<div onclick="play(36)">Pulled strings</div>
+<div onclick="play(37)">Miss: not in</div>
+<div onclick="play(38)">Sir: not in</div>
+<div onclick="play(39)">Explain?</div>
+<div onclick="play(40)">Missed me?</div>
+<div onclick="play(41)">Dishwasher cat</div>
+<div onclick="play(42)">Long story</div>
+<div onclick="play(43)">Jamie gets circulation</div>
+<div onclick="play(44)">Leo's pancreas</div>
+<div onclick="play(45)">Current carving</div>
+<div onclick="play(46)">That's a problem</div>
+<div onclick="play(47)">Vote Leo</div>
+<div onclick="play(48)">There we go</div>
+<div onclick="play(49)">Creature analysis</div>
+<div onclick="play(50)">Cringe</div>
+<div onclick="play(51)">Emotional Damage</div>
+<div onclick="play(52)">Playstation</div>
+<div onclick="play(53)">20 miles both ways</div>
+<div onclick="play(54)">No physics</div>
+<div onclick="play(55)">Brilliant</div>
+
+<script>
+function play(url) {
+    var a = new Audio(url + ".mp3");
+    a.play();
+}
+</script>
+</body>
+</html>
+
