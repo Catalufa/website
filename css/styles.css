@@ -562,8 +562,14 @@ canvas {
   font-weight: bold;
 }
 
+#mobile {
+  display: none !important;	
+}
 
 @media screen and (max-width: 600px){
+    #mobile {
+      display: flex !important;	
+    }
     .nav {
       display: none;
     }
