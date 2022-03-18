@@ -563,12 +563,12 @@ canvas {
 }
 
 #mobile {
-  display: none !important;	
+  display: none;	
 }
 
 @media screen and (max-width: 600px){
     #mobile {
-      display: flex !important;	
+      display: flex;	
     }
     .nav {
       display: none;
