@@ -438,7 +438,7 @@ canvas {
 
 #folderGroup:hover {
 	animation: folderGroup 2000ms linear 1 normal forwards;
-  cursor: pointer;
+/*   cursor: pointer; */
 }
 @keyframes folderGroup {
 	0% {
