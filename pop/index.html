@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pop Card</title>
+  <meta name="description" content="Pop Card Simulator">
+  <meta name="author" content="Leo Turnbull">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="fullscreen">
+    <img src="wallet.png" alt="">
+  </div>
+  <div id="menu" style="display:none;">
+    <img class="front" src="front.png">
+    <img id="pop" src="bottom.png">
+  </div>
+  <div id="card" style="display:none;">
+    <img src="pop1.png">
+    <h2 id="balance">
+      Balance: £8.05
+    </h2>
+    <img src="pop2.png">
+    <div class="recent-container">
+      <div class="recent">
+        <h4>Public transport</h4>
+        <p id="p1">Today</p>
+      </div>
+      <div class="recent">
+        <h4>Purchase</h4>
+        <h5>£3.25</h5>
+        <p id="p2">Today</p>
+      </div>
+      <div class="recent">
+        <h4>Public transport</h4>
+        <p>13 Nov</p>
+      </div>
+    </div>
+    <img id="seemore" src="pop3.png">
+    <img src="pop4.png">
+  </div>
+  <div id="more" style="display:none;">
+    <img id="back" src="back.png">
+    <img class="more" src="more.png">
+    
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p id="f1">Today</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£3.25</h5>
+      <p id="f2">Today</p>
+    </div>
+    
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>13 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£3.25</h5>
+      <p>13 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£1.00</h5>
+      <p>13 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>13 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>+ £20.00</h5>
+      <p>12 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£2.55</h5>
+      <p>12 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>+ £3.25</h5>
+      <p>12 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>12 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£3.25</h5>
+      <p>12 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>12 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£1.60</h5>
+      <p>5 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>5 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£3.25</h5>
+      <p>5 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>5 Nov</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£1.30</h5>
+      <p>25 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>25 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>+ £2.30</h5>
+      <p>25 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£2.30</h5>
+      <p>25 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>25 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£3.25</h5>
+      <p>25 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>25 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>+ £10.00</h5>
+      <p>24 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£3.25</h5>
+      <p>24 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>24 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>23 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>+ £3.25</h5>
+      <p>23 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£1.65</h5>
+      <p>23 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>23 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£3.25</h5>
+      <p>23 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Public transport</h4>
+      <p>22 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>£1.00</h5>
+      <p>22 Oct</p>
+    </div>
+    <div class="recent">
+      <h4>Purchase</h4>
+      <h5>+ £5.00</h5>
+      <p>18 Oct</p>
+    </div>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

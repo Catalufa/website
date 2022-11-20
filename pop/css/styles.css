@@ -1,0 +1,73 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: #e5e2db;
+}
+
+body {
+  background: #1b1c16;
+  display: flex;
+  flex-direction: column;
+}
+
+#fullscreen {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #1b1c16;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  padding: 20px;
+  font-weight: normal;
+}
+
+#menu img, #card img, #more img {
+  width: 100%;
+  display: block;
+}
+
+#balance {
+  color: black;
+  text-align: center;
+  width: calc(100% - 16px);
+  background: white;
+  margin: 0 8px 0 8px;
+  padding: 0;
+}
+
+.recent {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.recent h4, .recent h5 {
+  font-size: 1rem;
+}
+
+.recent h5 {
+  position: absolute;
+  right: 20px;
+  transform: translateY(-1.5rem)
+}
+
+.recent p {
+  font-size: 0.9rem
+}
+
+#back {
+  position: fixed;
+  z-index: 2;
+}
+
+.more {
+  padding-top: calc(100vw / 1080 * 166);
+}
