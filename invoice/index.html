@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidden Depths Invoice</title>
+  <style>
+    * {
+      -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+color-adjust: exact !important;                 /* Firefox 48 – 96 */
+print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+      margin: 0;
+      font-family: "Dm Sans", sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .print {
+      width: 210px;
+      height: 297px;
+      position: relative;
+      background: white;
+    }
+
+    .top {
+      width: 100%;
+      height: 10px;
+      background: lightgrey;
+    }
+    .title {
+      width: calc(100% - 14px);
+      height: 40px;
+      background: white;
+      display: flex;
+      align-items: center;
+      padding: 0 0 7px 0;
+      box-sizing: border-box;
+      margin-left: 7px;
+      border-bottom: 1px solid lightgrey;
+    }
+
+    .title img {
+      height: 100%;
+    }
+
+    .company {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 7px;
+      margin-top: 3.5px;
+    }
+
+    .company h1 {
+      font-size: 10px;
+      font-weight: 500;
+    }
+    .company h2 {
+      font-size: 5px;
+      font-weight: normal;
+    }
+
+    .break {
+      flex: 1;
+    }
+
+    .info {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 7px;
+      margin-top: 3.5px;
+      align-items: flex-end;
+      font-size: 5.5px;
+    }
+
+    .info * {
+      display: inline-block;
+    }
+
+    .info p {
+      font-weight: 400;
+    }
+
+    .billing {
+      width: calc(100% - 14px);
+      margin: 5px 7px;
+      box-sizing: border-box;
+      border-bottom: 1px solid lightgrey;
+    }
+
+    .billing h1 {
+      font-size: 15px;
+    }
+
+    .billing h2 {
+      font-size: 5px;
+      font-weight: normal;
+      transform: translateY(-3px);
+    }
+
+    .details {
+      width: calc(100% - 14px);
+      margin: 5px 0 10px;
+      font-size: 5.5px;
+    }
+
+    .table {
+      font-size: 5.5px;
+      width: calc(100% - 12px);
+      text-align: left;
+      margin: 0 6px;
+      border-spacing: 0;
+    }
+
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .terms {
+      width: 100%;
+      padding: 6px 7px;
+      box-sizing: border-box;
+      background: lightgrey;
+      color: grey;
+      font-size: 5.5px;
+    }
+
+    .website {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      font-size: 5.5px;
+      color: grey;
+    }
+
+    .payment {
+      width: calc(100% - 14px);
+      margin: 0 7px 7px;
+      font-size: 5.5px;
+      position: relative;
+      padding-top: 7px;
+      border-top: 1px solid lightgrey;
+    }
+
+    .total {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      font-size: 8px;
+    }
+  </style>
+</head>
+<body>
+  <section class="print">
+    <div class="top"></div>
+    <div class="title">
+      <img src="cover.svg" alt="Hidden Depths">
+      <div class="company">
+        <h1>Hidden Depths</h1>
+        <h2>hiddendepths.uk</h2>
+      </div>
+      <div class="break"></div>
+      <div class="info">
+        <b>Invoice <p id="number">#0003</p></b>
+        <b>Issued on</b>
+        <p id="date">11/11/11</p>
+      </div>
+    </div>
+    <div class="billing">
+      <h1 id="name">DR CP AESTHETICS</h1>
+      <h2 id="desc">Additional services</h2>
+      <div class="details">
+        <b>Billed to</b>
+        <p id="billedTo">Leo Turnbull</p>
+        <p id="billedEmail">me@leoturnbull.com</p>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Hours</th>
+          <th>£/hr</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="table">
+        <tr>
+          <td>Adding website content</td>
+          <td>4</td>
+          <td>18.50</td>
+          <td>£74</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="bottom">
+      <div class="payment">
+        <div class="payment-info">
+          <b>Payment info</b>
+          <p>Name: Leo Turnbull</p>
+          <p>Sort Code: 30-93-55</p>
+          <p>Account #: 69311560</p>
+        </div>
+        <p class="total">Total: <b id="total">£93.00</b></p>
+      </div>
+      <div class="terms">
+        <b>Terms & Conditions</b>
+        <p>Total payment due in 60 days</p>
+      </div>
+    </div>
+    <p class="website">hiddendepths.uk</p>
+  </section>
+  <button onclick="go()">Run</button>
+  <script>
+    async function go() {
+      document.querySelector("section").style.transform = "scale(5)"
+      canvas = await html2canvas(document.querySelector("section"))
+        .then(canvas => {
+           console.log(canvas.toDataURL())
+           document.querySelector("section").style.transform = ""
+        })
+    }
+  </script>
+  <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
