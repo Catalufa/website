@@ -16,6 +16,10 @@ print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
     html, body {
       width: 100%;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .print {
@@ -23,6 +27,7 @@ print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
       height: 297px;
       position: relative;
       background: white;
+      transform: scale(4) translateY(20%);
     }
 
     .top {
@@ -171,18 +176,18 @@ print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
       </div>
       <div class="break"></div>
       <div class="info">
-        <b>Invoice <p id="number">#0003</p></b>
+        <b>Invoice <p id="number" contentEditable="true">#0003</p></b>
         <b>Issued on</b>
-        <p id="date">11/11/11</p>
+        <p id="date" contentEditable="true">11/11/11</p>
       </div>
     </div>
     <div class="billing">
-      <h1 id="name">DR CP AESTHETICS</h1>
-      <h2 id="desc">Additional services</h2>
+      <h1 id="name" contentEditable="true">DR CP AESTHETICS</h1>
+      <h2 id="desc" contentEditable="true">Additional services</h2>
       <div class="details">
         <b>Billed to</b>
-        <p id="billedTo">Leo Turnbull</p>
-        <p id="billedEmail">me@leoturnbull.com</p>
+        <p id="billedTo" contentEditable="true">Leo Turnbull</p>
+        <p id="billedEmail" contentEditable="true">me@leoturnbull.com</p>
       </div>
     </div>
     <table class="table">
@@ -196,10 +201,10 @@ print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
       </thead>
       <tbody id="table">
         <tr>
-          <td>Adding website content</td>
-          <td>4</td>
-          <td>18.50</td>
-          <td>£74</td>
+          <td contentEditable="true">Adding website content</td>
+          <td contentEditable="true">4</td>
+          <td contentEditable="true">18.50</td>
+          <td contentEditable="true">£74</td>
         </tr>
       </tbody>
     </table>
@@ -207,11 +212,11 @@ print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
       <div class="payment">
         <div class="payment-info">
           <b>Payment info</b>
-          <p>Name: Leo Turnbull</p>
-          <p>Sort Code: 30-93-55</p>
-          <p>Account #: 69311560</p>
+          <p contentEditable="true">Name: Leo Turnbull</p>
+          <p contentEditable="true">Sort Code: 30-93-55</p>
+          <p contentEditable="true">Account #: 69311560</p>
         </div>
-        <p class="total">Total: <b id="total">£93.00</b></p>
+        <p class="total">Total: <b id="total" contentEditable="true">£93.00</b></p>
       </div>
       <div class="terms">
         <b>Terms & Conditions</b>
@@ -223,11 +228,14 @@ print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
   <button onclick="go()">Run</button>
   <script>
     async function go() {
-      document.querySelector("section").style.transform = "scale(5)"
+      document.querySelector("section").style.transform = "scale(8)"
       canvas = await html2canvas(document.querySelector("section"))
         .then(canvas => {
-           console.log(canvas.toDataURL())
-           document.querySelector("section").style.transform = ""
+           var image = new Image();
+           image.src = canvas.toDataURL()
+           var w = window.open("");
+           w.document.write(image.outerHTML);
+           document.querySelector("section").style.transform = "scale(4) translateY(20%);"
         })
     }
   </script>
